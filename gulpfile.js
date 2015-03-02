@@ -1,7 +1,3 @@
-var gulp = require('gulp');
-
-
-// Include Our Plugins
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
@@ -85,7 +81,7 @@ gulp.task('scripts', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('js/*.js', ['lint', 'scripts']);
+  gulp.watch('js/*.js', ['lint', 'scripts', 'compile index.html']);
   //  gulp.watch('scss/**/*.scss', ['sass']);
 });
 
